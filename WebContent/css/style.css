@@ -1,0 +1,1233 @@
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body , html {
+    height: 100%;
+    width:100vw;
+}
+
+body{
+	font-family:"Noto Sans JP";
+	animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    min-width:1200px;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+/*ヘッダーメニュー*/
+
+#header{
+	width:100%;
+	min-width:900px;
+	height:120px;
+}
+
+#header img{
+	width:250px;
+	height:120px;
+}
+
+#headerRight{
+	float:right;
+	width:600px;
+	height:120px;
+}
+
+#headerRight div{
+	float:right;
+	width:120px;
+	height:100px;
+}
+
+#headerRight div{
+	position:relative;
+	text-align:center;
+	margin-top:10px;
+	margin-right:80px;
+	letter-spacing:4px;
+	cursor:pointer;
+}
+
+#headerRight div:hover img{
+	opacity:0.3;
+}
+
+#headerRight div:nth-child(1){
+	border-bottom:2px solid orange;
+}
+
+#headerRight div:nth-child(2){
+	border-bottom:2px solid green;
+}
+
+#headerRight div:nth-child(3){
+	border-bottom:2px solid yellow;
+}
+
+#headerRight div img{
+	position:absolute;
+	width:100px;
+	height:100px;
+	opacity:0.1;
+}
+
+#headerRight div:nth-child(1) img{
+	top:0px;
+	right:20px;
+}
+
+#headerRight div:nth-child(2) img{
+	top:-10px;
+	right:15px;
+}
+
+#headerRight div:nth-child(3) img{
+	top:0px;
+	right:5px;
+}
+
+#headerRight div:after{
+	content:" ";
+	display:block;
+	clear:both;
+}
+
+#headerRight:after{
+	content:" ";
+	display:block;
+	clear:both;
+}
+
+/*レフトメニュー*/
+#leftMenu{
+	clear:both;
+	float:left;
+	margin-top:25px;
+	margin-bottom:50px;
+	width:20%;
+	max-width:250px;
+	min-width:250px;
+	word-wrap:break-word;
+	text-align:center;
+	overflow:hidden;
+}
+
+#leftMenu h3{
+	display:block;
+	background-color:#5507FF;
+	margin:0px;
+	color:white;
+	font-family:"Noto Sans JP";
+}
+
+#account{
+	text-align:center;
+	padding:0px;
+	margin:0px;
+	border-top:5px double #AAA;
+	border-bottom:5px double #AAA;
+	word-wrap:word-break;
+}
+
+ #account img{
+	width:110px;
+	height:110px;
+	border:5px solid #AAA;
+	border-radius:55px;
+	box-shadow:inset
+}
+
+#leftMenu select{
+	width:100%;
+}
+
+#leftMenu input{
+	width:98.5%;
+	height:30px;
+}
+
+#leftMenu button{
+	width:100%;
+	height:30px;
+	background-color:#5507FF;
+	color:white;
+}
+
+#leftMenu button:hover{
+	cursor:pointer;
+}
+
+/**/
+#rightMenu{
+	float:left;
+	margin-left:70px;
+	margin-bottom:50px;
+	width:73%;
+	min-width:831px;
+	max-width:1750px;
+	overflow:hidden;
+}
+
+/*カテゴリーメニュ*/
+#categoryMenu{
+	width:90%;
+	height:28px;
+	margin:20px;
+	margin-bottom:0px;
+	overflow:hidden;
+}
+
+#categoryMenu ul{
+	list-style:none;
+	width:100%;
+	min-width:658px;
+	padding:0px;
+	margin:0px;
+}
+
+#categoryMenu ul li{
+	display:inline-block;
+	width:10%;
+	min-width:48px;
+	height:25px;
+	margin-right:10px;
+	border:1px solid #AAA;
+	text-align:center;
+	background-color:#FFF;
+	display:inline-block;
+	border-top-right-radius:8px;
+	border-top-left-radius:8px;
+	word-wrap:break-word;
+}
+
+#categoryMenu ul li:nth-child(1){
+	border-top:2px solid #00FF3B;
+}
+
+#categoryMenu ul li:nth-child(2){
+	border-top:2px solid #00F9A9;
+}
+
+#categoryMenu ul li:nth-child(3){
+	border-top:2px solid #B6FF01;
+}
+
+#categoryMenu ul li:nth-child(4){
+	border-top:2px solid #00ECFF;
+}
+
+#categoryMenu ul li:nth-child(5){
+	border-top:2px solid #005FFF;
+}
+
+#categoryMenu ul li:nth-child(6){
+	border-top:2px solid #5507FF;
+}
+
+#categoryMenu ul li:nth-child(7){
+	border-top:2px solid #FF0461;
+}
+
+#categoryMenu ul li:nth-child(8){
+	border-top:2px solid #FF4F02;
+}
+
+#categoryMenu ul li a{
+	text-decoration:none;
+}
+
+#categoryMenu ul li:last-child{
+	margin-right:0px;
+
+}
+
+#categoryMenu{
+	position:relative;
+}
+
+#categoryMenu ul:after{
+	position:absolute;
+	content:"";
+	width:94%;
+	max-width:745px;
+	bottom:0;
+	left:0;
+	border-bottom:1px solid #AAA;
+	z-index:1;
+}
+
+#categoryMenu ul:before{
+	z-index:1;
+}
+
+#categoryMenu ul li{
+	position:relative;
+	z-index:0;
+}
+
+#categoryMenu ul li.select{
+	z-index:2;
+	border-bottom-color:#EEEEEE;
+	background-color:#EEEEEE;
+}
+
+
+/*商品リスト*/
+
+#productlist{
+	clear:both;
+	width:84.5%;
+	height:900px;
+	margin-left:20px;
+	border:1px solid #AAA;
+	border-top-color:#EEEEEE;
+	background-color:#EEEEEE;
+	overflow:hidden;
+}
+
+#productlist div.list{
+	float:left;
+	width:24%;
+	height:400px;
+	margin-top:20px;
+	color:black;
+	text-align:center;
+}
+#productlist div.list img{
+	width:200px;
+	height:230px;
+}
+
+#productlist div.list span{
+	color:#FFCC00;
+}
+
+#productlist div.list a{
+	text-decoration:none;
+	font-size:1.3rem;
+}
+
+/*商品詳細画面*/
+#productdetails{
+	clear:both;
+	width:95.4%;
+	margin-left:20px;
+	border:1px solid #AAA;
+	border-top-color:#EEEEEE;
+	background-color:#EEEEEE;
+}
+
+#imagedetails{
+	float:left;
+	width:23%;
+	margin-top:40px;
+	padding:0px;
+}
+
+#imagedetails img{
+	width:180px;
+	height:210px;
+	margin-left:60px;
+	border:1px solid black;
+}
+
+#maindetails{
+	float:left;
+	width:47%;
+	margin-top:40px;
+	margin-left:20px;
+	padding-left:60px;
+}
+
+#maindetails span,
+#maindetails h2,
+#maindetails h3{
+	display:block;
+	width:80%;
+	word-wrap:break-word;
+}
+
+#maindetails span{
+	font-size:0.8rem;
+}
+
+#maindetails h2,
+#maindetails h3{
+	border-bottom:3px dotted #AAA;
+}
+
+#procedure{
+	float:left;
+	width:16%;
+	margin-top:40px;
+	text-align:center;
+	border:1px solid #AAA;
+	border-width:3px;
+	border-radius:10px;
+	background-color:white;
+}
+
+#procedure span{
+	display:block;
+	border-bottom:5px double #AAA;
+	font-family:Times New Roman;
+	font-size:2.5rem;
+	color:#FF0461;
+}
+
+#procedure select{
+	width:40%;
+	font-size:1.5rem;
+	margin-top:-60px;
+}
+
+#procedure button{
+	width:100%;
+	background-color:#5507FF;
+	font-size:1.1rem;
+	color:white;
+}
+
+#procedure button:hover{
+	background-color:#EEEEEE;
+	color:black;
+	cursor:pointer;
+}
+
+#procedure:after{
+	content:" ";
+	display:block;
+	claer:both;
+}
+
+#relevance{
+	clear:both;
+	width:80%;
+	margin:0 auto;
+	text-align:center;
+	border-bottom:3px dotted #AAA;
+}
+
+#relevance h2{
+	display:block;
+	border-bottom:3px dotted #AAA;
+}
+
+#relevance table tr td{
+	word-wrap:break-word;
+	width:200px;
+}
+
+#relevance table tr td img{
+	width:150px;
+	height:180px;
+}
+
+/*レビュー画面*/
+#review{
+	width:70%;
+	margin:0 auto;
+	margin-bottom:40px;
+}
+
+#review table{
+	width:100%;
+	margin-top:30px;
+	border-bottom:3px dotted #AAA;
+	table-layout: fixed;
+}
+
+#review table tr:nth-child(1) td:nth-child(1){
+	width:12%;
+	text-align:center;
+}
+
+#review table tr:nth-child(2) td:nth-child(1){
+	color:#FFCC00;
+}
+
+#review table tr td:nth-child(2){
+	width:80%;
+}
+
+#review table tr td:nth-child(1) span{
+
+}
+
+#review table tr td img{
+	width:80px;
+	height:80px;
+	opacity:0.2;
+}
+
+#review table tr td img.goodimage{
+	width:20px;
+	height:20px;
+	opacity:0.2;
+}
+
+#review table tr td button{
+	width:100%;
+}
+
+#rightMenu:after{
+	content:" ";
+	display:block;
+	clear:both;
+}
+
+/*ログインメニュー*/
+#loginMenu{
+	width:50%;
+	height:400px;
+	margin-left:350px;
+	margin-top:40px;
+	padding:40px;
+	background-color:#EEEEEE;
+	border:1px solid #AAA;
+	border-radius:10px;
+}
+
+#loginMenu table{
+	table-layout: fixed;
+	margin-top:20px;
+}
+
+#loginMenu table tr td{
+	width:250px;
+}
+
+#loginMenu table tr td input{
+	width:90%;
+	height:25px;
+}
+
+#loginMenu table tr td button{
+	width:92%;
+	height:40px;
+	border-radius:5px;
+	border:1px solid #5507FF;
+	background-color:white;
+	font-family:"Noto Sans JP";
+}
+
+#loginMenu table tr td button:hover{
+	cursor:pointer;
+}
+
+#loginMenu table tr td img{
+	width:250px;
+	height:120px;
+}
+
+#loginMenu h3{
+	text-align:center;
+}
+
+#loginMenu h3 a{
+	border-bottom:2px dotted #AAA;
+	text-decoration:none;
+	color:black;
+}
+
+
+/*ユーザー登録画面*/
+#createUser{
+	background-color:#EEEEEE;
+	margin:0 auto;
+	border-radius:20px;
+	width:70%;
+}
+
+#createUser h1{
+	border-bottom:1px solid #AAA;
+}
+
+#createUser h2{
+	border-bottom:1px solid #AAA;
+}
+
+#createUser table tr td:nth-child(1){
+	width:220px;
+}
+
+#createUser table tr td span{
+	width:37px;
+	background-color:red;
+	border:1px solid black;
+	border-radius:3px;
+	font-size:0.8rem;
+	color:white;
+}
+
+#createUser table tr td input{
+	width:200px;
+	height:30px;
+	border:1px solid #AAA;
+	border-radius:5px;
+}
+
+#createUser table tr td.creatUserTable input{
+	width:350px;
+}
+
+#createUser table{
+	margin-left:200px;
+}
+
+#rule{
+	text-align:center;
+}
+
+#rule ol{
+	width:400px;
+	height:200px;
+	margin:0 auto;
+	margin-top:20px;
+	overflow:scroll;
+	background-color:white;
+	text-align:left;
+}
+
+#rule span{
+	border-bottom:3px dotted #AAA;
+}
+
+#createUser button{
+	margin-left:510px;
+	border:1px solid #5507FF;
+	border-radius:5px;
+	font-size:1.4rem;
+	background-color:white;
+}
+
+#createUser button:hover{
+	cursor:pointer;
+}
+
+
+/*マイページ画面*/
+#mypage{
+	width:90%;
+	margin:0 auto;
+	background-color:#EEEEEE;
+	border-radius:20px;
+	border-top:5px solid green;
+	text-align:center;
+}
+
+#mypageMenu{
+	width:90%;
+	margin:0 auto;
+	padding:40px;
+	background-color:#EEEEEE;
+	border-radius:20px;
+	text-align:center;
+}
+
+#mypageMenu button{
+	position:relative;
+	width:27%;
+	height:350px;
+	margin:0;
+	padding:0;
+	border:1px solid #AAA;
+	border-radius:20px;
+	color:white;
+	cursor:pointer;
+}
+
+#mypageMenu button img{
+	position:absolute;
+	width:90%;
+	height:90%;
+	opacity:0.15;
+}
+
+#mypageMenu button:hover img{
+	opacity:0.5;
+}
+
+#mypageMenu button:nth-child(1) img{
+	top:-10px;
+	left:10px;
+}
+
+#mypageMenu button:nth-child(2) img{
+	top:40px;
+	left:18px;
+}
+
+#mypageMenu button:nth-child(3) img{
+	top:25px;
+	left:18px;
+}
+
+#mypageMenu button:hover{
+	background-color:#AAA;
+}
+
+#mypageMenu button:nth-child(1){
+	background-color:green;
+}
+
+#mypageMenu button:nth-child(2){
+	background-color:#005FFF;
+}
+
+#mypageMenu button:nth-child(3){
+	background-color:#FF4F02;
+}
+
+/*ユーザー情報画面*/
+#mypageUserInfo{
+	width:90%;
+	margin:0 auto;
+	background-color:#EEEEEE;
+	border-radius:20px;
+	border-top:5px solid green;
+	text-align:center;
+}
+
+#mypageUserInfoMenu{
+	width:90%;
+	margin:0 auto;
+}
+
+#mypageUserInfoMenu > table{
+	width:100%;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-size:1.2rem;
+}
+
+#mypageUserInfoMenu > table tr td{
+	width:50%;
+	line-height:50px;
+	border:1px solid #AAA;
+	cursor:pointer;
+}
+
+#mypageUserInfoMenu > table tr td:nth-child(1){
+	border-top:2px solid green;
+	border-top-left-radius:10px;
+	border-bottom-color:#EEEEEE;
+	background-color:#EEEEEE;
+}
+
+#mypageUserInfoMenu > table tr td:nth-child(2){
+	border-top:2px solid #5507FF;
+	border-top-right-radius:10px;
+	background-color:white;
+}
+
+#mypageUserInfoMenu div{
+	width:99.8%;
+	margin:0;
+	padding:0;
+	border:1px solid #AAA;
+	border-top:none;
+	backgroud-color:#EEEEEE;
+}
+
+#mypageUserInfoMenu div > table{
+	width:100%;
+}
+
+#mypageUserInfoMenu div > table tr td{
+	background-color:white;
+}
+
+#mypageUserInfoMenu div > table tr td:nth-child(1){
+	width:15%;
+	height:40px;
+	background-color:#5507FF;
+	color:white;
+}
+
+#mypageUserInfoMenu div > table tr:nth-child(1) td:nth-child(2),
+#mypageUserInfoMenu div > table tr:nth-child(1) td:nth-child(4),
+#mypageUserInfoMenu div > table tr:nth-child(2) td:nth-child(2),
+#mypageUserInfoMenu div > table tr:nth-child(2) td:nth-child(4){
+	background-color:#5507FF;
+	color:white;
+}
+
+#mypageUserInfoMenu div > table tr td button{
+	width:100%;
+	height:178px;
+	background-color:#5507FF;
+	font-size:1.4rem;
+	color:white;
+	cursor:pointer;
+}
+
+
+/*購入履歴画面*/
+#mypageHistoryInfo{
+	float:left;
+	width:80%;
+}
+
+#mypageHistoryInfo div:nth-child(2){
+	width:100%;
+	overflow:auto;
+}
+
+#mypageHistoryInfo > table{
+	width:60%;
+	margin:0 auto;
+}
+
+#mypageHistoryInfo table tr td table{
+	position: relative;
+	width:300px;
+	margin-left:40px;
+	filter: drop-shadow(0 2px 4px);
+	background-color:#EEEEEE;
+	text-align:center;
+	cursor:pointer;
+}
+
+#mypageHistoryInfo table tr td table:hover tr:nth-child(2) td img:nth-child(2){
+	filter:grayscale(0);
+	opacity:1.0;
+}
+
+#mypageHistoryInfo table tr td table tr:nth-child(2) td,
+#mypageHistoryInfo table tr td table tr:nth-child(3) td{
+	text-align:center;
+}
+
+#mypageHistoryInfo table tr td table tr:nth-child(4) td:nth-child(2),
+#mypageHistoryInfo table tr td table tr:nth-child(5) td:nth-child(2),
+#mypageHistoryInfo table tr td table tr:nth-child(6) td:nth-child(2),
+#mypageHistoryInfo table tr td table tr:nth-child(7) td:nth-child(2){
+	border-bottom:1px solid black;
+	word-wrap:break-word;
+}
+
+#mypageHistoryInfo table tr td table tr:nth-child(1) td{
+	width:100%;
+	text-align:center;
+	border-bottom:5px double #AAA;
+}
+
+#mypageHistoryInfo table tr td table tr:nth-child(1) td input{
+	width:20px;
+	height:20px;
+	border-radius:10px;
+}
+
+#mypageHistoryInfo table tr td table tr:nth-child(2) td{
+	border-bottom:5px double #AAA;
+}
+
+#mypageHistoryInfo table tr td table tr:nth-child(2) td img:nth-child(1){
+	width:150px;
+	height:50px;
+	opacity:0.3;
+	filter:grayscale(100%);
+}
+
+#mypageHistoryInfo table tr td table tr:nth-child(3) td img{
+	width:200px;
+	height:200px;
+}
+
+#mypageHistoryInfo table tr td table::after {
+  height: 20px;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+#mypageHistoryInfo table tr td table::after {
+  bottom: -20px;
+  background: linear-gradient(135deg, #EEEEEE 10px, transparent 0), linear-gradient(225deg, #EEEEEE 10px, transparent 0);
+  background-size: 20px 20px;
+}
+
+#mypageHistoryInfo table tr td input{
+	border-radius:10px;
+}
+
+#mypageHistoryInfo > button{
+	margin-left:500px;
+	margin-bottom:30px;
+	width:300px;
+	height:60px;
+	border-radius:15px;
+	background-color:#5507FF;
+	font-size:1.3rem;
+	color:white;
+}
+
+#mypageHistoryInfo #checkAllButton button{
+	width:300px;
+	height:60px;
+	margin-left:500px;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-radius:15px;
+	font-size:1.3rem;
+	background-color:#00FF3B;
+}
+
+/*ポイント画面*/
+#pointinfo{
+	float:right;
+	width:70%;
+	margin-right:100px;
+	background-color:#EEEEEE;
+	border:1px solid #AAA;
+	border-radius:10px;
+	text-align:center;
+}
+
+#pointinfo table:nth-child(1){
+	text-align:center;
+}
+
+#pointinfo table:nth-child(1) tr td input{
+	height:30px;
+}
+
+#pointinfo table:nth-child(1) tr:nth-child(1) td:nth-child(1) img{
+	width:300px;
+	height:300px;
+}
+
+#pointinfo table:nth-child(1) tr:nth-child(1) td:nth-child(3) img{
+	width:300px;
+	height:300px;
+}
+
+#pointinfo table:nth-child(1) tr:nth-child(1) td:nth-child(2){
+	font-size:5rem;
+}
+
+#pointinfo table:nth-child(1) tr:nth-child(2) td:nth-child(1){
+	border-bottom:3px solid #00FF3B;
+}
+
+#pointinfo table:nth-child(1) tr:nth-child(2) td:nth-child(3){
+	border-bottom:3px solid #FF4F02;
+}
+
+#pointinfo table:nth-child(1) tr:nth-child(2) td,
+#pointinfo table:nth-child(1) tr:nth-child(3) td{
+	font-size:2rem;
+}
+#pointinfo table:nth-child(2){
+	border:1px solid #AAA;
+	border-radius:5px;
+}
+
+#pointinfo table:nth-child(2) tr td{
+	height:30px;
+}
+
+#pointinfo button{
+	margin-top:20px;
+	margin-bottom:20px;
+	height:60px;
+	width:200px;
+	border-radius:15px;
+	background-color:#5507FF;
+	color:white;
+	font-size:1.3rem;
+}
+
+#pointinfo span{
+	color:red;
+}
+
+
+/*レビュー投稿*/
+#reviewdiv{
+	float:left;
+	width:80%;
+	margin-left:30px;
+	text-align:center;
+}
+
+
+#reviewForm{
+	margin-top:60px;
+	text-align:center;
+	width:60%;
+	padding:40px;
+	margin:0 auto;
+	background-color:#EEEEEE;
+	border-radius:20px;
+}
+
+#reviewForm table{
+	width:60%;
+}
+
+#reviewForm table tr td{
+	border-left:3px solid orange;
+}
+
+#reviewForm table tr td input{
+	width:98%;
+	height:40px;
+}
+
+#reviewForm table tr td textarea{
+	width:98%;
+	height:130px;
+}
+
+#reviewForm table tr td:first-child{
+	background-color:#dcdcdc;
+}
+
+#reviewForm table tr:nth-child(2) td:nth-child(2){
+	font-size:2rem;
+}
+
+#reviewForm table tr:nth-child(2) td:nth-child(2) div{
+	transform: rotateY( 180deg );
+}
+
+#reviewForm table tr:nth-child(2) td:nth-child(2) div input[type='radio']{
+	display:none;
+}
+
+#reviewForm table tr:nth-child(2) td:nth-child(2) div label{
+	cursor:pointer;
+	color:#dcdcdc;
+}
+
+#reviewForm table tr:nth-child(2) td:nth-child(2) div label:hover,
+#reviewForm table tr:nth-child(2) td:nth-child(2) div label:hover ~ label,
+#reviewForm table tr:nth-child(2) td:nth-child(2) div input[type='radio']:checked ~ label{
+	color:orange;
+	transition:0.5s;
+}
+
+#reviewForm table tr td{
+	color:black;
+}
+
+#reviewTitle{
+	width:250px;
+}
+
+#reviewForm button{
+	width:150px;
+	height:50px;
+	margin-top:30px;
+	margin-bottom:30px;
+	border:2px solid #dcdcdc;
+	border-radius:15px;
+	background-color:#5507FF;
+	color:white;
+	cursor:pointer;
+}
+
+#reviewForm button:hover{
+	background-color: #dcdcdc;
+}
+
+
+/*カート*/
+#cart{
+	text-align:center;
+}
+
+#cart span{
+	color:red;
+	font-size:1.2rem;
+}
+
+#cart h1{
+	border:1px solid #AAA;
+	border-top:5px solid orange;
+	border-radius:20px;
+	background-color:#EEEEEE;
+}
+
+#cart table{
+	width:90%;
+	margin-bottom:50px;
+}
+
+#cart table tr th{
+	background-color:#EEEEEE;
+}
+
+#cart table tr th:nth-child(1){
+	width:60px;
+}
+
+#cart table tr td:nth-child(4),
+#cart table tr td:nth-child(5),
+#cart table tr td:nth-child(6){
+	width:13%;
+	word-wrap:break-word;
+}
+
+#cart > button{
+	border:1px solid #AAA;
+	width:45%;
+	height:40px;
+	background-color:#5507FF;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	color:white;
+	font-size:1.1rem;
+	cursor:pointer;
+}
+
+#cart button:hover{
+	color:black;
+	background-color:#EEEEEE;
+}
+
+/*購入確認画面*/
+#settlementConfirm{
+	width:80%;
+	margin:0 auto;
+	margin-top:20px;
+	padding:20px;
+	background-color:#EEEEEE;
+}
+
+#settlementConfirm h2{
+	border-bottom:1px solid #AAA;
+}
+
+#settlementConfirm table tr:nth-child(2) td:nth-child(1){
+	vertical-align:top;
+}
+
+#settlementConfirm table tr:nth-child(2) td:nth-child(1) table{
+	background-color:white;
+}
+
+#settlementConfirm table tr:nth-child(2) td:nth-child(1) table th{
+	background-color:#5507FF;
+	color:white;
+}
+
+#settlementConfirm table tr:nth-child(2) td:nth-child(2) button{
+	width:100%;
+	background-color:#5507FF;
+	color:white;
+}
+
+#settlementConfirm table tr:nth-child(3) td table{
+	width:80%;
+	border-radius:10px;
+	background-color:#5507FF;
+}
+
+#settlementConfirm table tr:nth-child(3) td table tr td{
+	background-color:white;
+	border:1px solid #AAA;
+}
+
+#settlementConfirm table tr:nth-child(3) td table tr td button{
+	height:40px;
+	width:100%;
+	margin:0;
+	padding:0;
+	font-size:1.1rem;
+	cursor:pointer;
+}
+
+.slider table tr td:nth-child(3){
+	width:340px;
+}
+
+/*完了メッセージ*/
+#complete{
+	width:100%;
+	height:400px;
+	text-align:center;
+	margin-top:200px;
+}
+
+#complete span{
+	display:inline-block;
+	font-size:1.5rem;
+	width:60px;
+	height:60px;
+	line-height:60px;
+	color:white;
+}
+#complete span:nth-child(odd){
+	margin-top:15px;
+	background-color:#5507FF;
+}
+
+#complete span:nth-child(even){
+	margin-bottom:15px;
+	background-color:#FF0461;
+}
+
+#ranking{
+	width:80%;
+}
+
+#ranking .rankinglist{
+	width:100%;
+}
+
+#ranking .rankinglist p{
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+}
+
+#ranking .rankinglist:nth-child(1) p{
+	border-left:5px double red;
+	border-right:5px double red;
+}
+
+#ranking .rankinglist:nth-child(2) p{
+	border-left:5px double blue;
+	border-right:5px double blue;
+}
+
+#ranking .rankinglist:nth-child(3) p{
+	border-left:5px double green;
+	border-right:5px double green;
+}
+
+#ranking .rankinglist img{
+	width:150px;
+	height:180px
+}
+
+#pagecss{
+	clear:both;
+	text-align:center;
+}
+
+#pagecss a{
+	font-size:1.4rem;
+	margin-right:15px;
+}
+
+#footer{
+	clear:both;
+	bottom:-60px;
+	height:50px;
+	background-color:black;
+}
